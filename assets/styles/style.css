@@ -172,10 +172,16 @@ body {
 
 .cont_04 {
     grid-area: cont_04;
-    border: 1px solid black;
     height: 1fr;
+    display: grid;
 }
 
+.video {
+    align-self: center;
+    justify-self: center;
+    padding: 5px;
+    max-width: 100%;
+}
 
 .footer {
     grid-area: footer;
@@ -200,6 +206,7 @@ body {
         "txt_1"
         "txt_2"
         "txt_3 ";
+    gap: 5px;
 }
 
 .text {
@@ -209,7 +216,7 @@ body {
     justify-content: left;
     font-family: 'Avenir';
     color: white;
-    font-size: 6vh;
+    font-size: 4vh;
 }
 
 
@@ -220,7 +227,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     text-decoration: none;
 }
 
@@ -230,7 +237,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     text-decoration: none;
 }
 
@@ -241,7 +248,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     text-decoration: none;
 }
 
@@ -251,6 +258,6 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 3vh;
+    font-size: 2vh;
     text-decoration: none;
 }
