@@ -12,6 +12,12 @@
     font-size: medium;
 }
 
+@font-face {
+    font-family: 'Georgia';
+    src: url(../Georgia/georgia\ bold.ttf);
+    font-style: normal;
+    font-size: medium;
+}
 
 *::before,
 *::after {
@@ -21,7 +27,7 @@
 html {
     height: 100%;
     margin: 0;
-    padding: ;
+    padding: 0;
 }
 
 body {
@@ -31,74 +37,179 @@ body {
     padding: 5px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     grid-template-areas:
-        "cont_01 cont_01 cont_01 cont_01 cont_01"
-        "cont_02 cont_02 cont_02 cont_02 cont_02"
-        "cont_03 cont_03 cont_03 cont_03 cont_03"
-        "cont_04 cont_04 cont_04 cont_04 cont_04"
-        "cont_05 cont_05 cont_05 cont_05 cont_05";
+        "header header header "
+        "main main main "
+        "footer footer footer ";
 }
 
-
-
-.cont_01 {
-    grid-area: cont_01;
-    border: 1px solid black;
+.header {
+    grid-area: header;
     height: 1fr;
     width: 100%;
+    background-image: url(../images/radu-florin-CwTBt6jyagQ-unsplash\ 1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-areas: "logo nav btn";
+    justify-items: center;
 }
 
-.cont_02 {
-    grid-area: cont_02;
-    border: 1px solid black;
+.logo {
+    grid-area: logo;
+    height: 100%;
+    justify-content: center;
+    width: 20%;
+}
+
+.pct {
+    max-width: 100%;
+    height: 5vh;
+}
+
+.nav {
+    grid-area: nav;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav_1 nav_2 nav_3 nav_4 ";
+    justify-items: center;
+    align-items: flex-start;
+    margin: 15px;
+    font-size: 1vh;
+    font-family: 'Lato';
+}
+
+.nav_1 {
+    grid-area: nav_1;
+    text-decoration: none;
+    justify-content: center;
+    color: #292929;
+}
+
+.nav_2 {
+    grid-area: nav_2;
+    text-decoration: none;
+    justify-content: center;
+    color: #292929;
+}
+
+.nav_3 {
+    grid-area: nav_3;
+    text-decoration: none;
+    justify-content: center;
+    color: #292929;
+}
+
+.nav_4 {
+    grid-area: nav_4;
+    text-decoration: none;
+    justify-content: center;
+    color: #292929;
+}
+
+.btn {
+    grid-area: btn;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "pct_2  button";
+    gap: 10px;
+    justify-items: center;
+}
+
+.pct_2 {
+    max-width: 100%;
+    width: 2vw;
+    height: 2vh;
+    grid-area: pct_2;
+}
+
+.button {
+    grid-area: button;
+    font-family: 'Lato';
+    font-size: 1vh;
+    text-decoration: none;
+    color: #292929;
+    justify-content: center;
+
+}
+
+.main {
+    grid-area: main;
     height: 1fr;
     width: 100%;
+    background: rgba(36, 88, 82, 1);
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "cont_03 cont_04"
+        "cont_03 cont_04"
+        "cont_03 cont_04"
+        "cont_03 cont_04"
+        "cont_03 cont_04"
+        "cont_03 cont_04";
 }
 
 .cont_03 {
     grid-area: cont_03;
-    border: 1px solid black;
     height: 1fr;
-    width: 100%;
+    justify-content: center;
+    display: grid;
+    text-align: center;
+}
+
+.lets {
+    font-family: 'Georgia';
+    color: rgba(255, 255, 255, 1);
+    align-self: center;
+    font-size: 5vh;
 }
 
 .cont_04 {
     grid-area: cont_04;
     border: 1px solid black;
     height: 1fr;
-    width: 100%;
-
 }
 
-.cont_05 {
-    grid-area: cont_05;
+
+.footer {
+    grid-area: footer;
+    display: grid;
     height: 1fr;
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 100%;
+    justify-content: center;
+    height: 100%;
     width: 100%;
     background-color:
         rgba(36, 88, 82, 1);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 200px;
     grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "text  text text text text"
-        "txt txt txt txt txt"
-        "txt_1 txt_1 txt_1 txt_1 txt_1"
-        "txt_2 txt_2 txt_2 txt_2 txt_2"
-        "txt_3 txt_3 txt_3 txt_3 txt_3"
-    ;
+        "text "
+        "txt"
+        "txt_1"
+        "txt_2"
+        "txt_3 ";
 }
 
 .text {
     grid-area: text;
     width: 100%;
     height: 1fr;
-    display: grid;
-    justify-content: center;
+    justify-content: left;
     font-family: 'Avenir';
     color: white;
-    font-size: 40px;
-    line-height: 55px;
+    font-size: 6vh;
 }
 
 
@@ -109,8 +220,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 3vh;
     text-decoration: none;
 }
 
@@ -120,8 +230,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 3vh;
     text-decoration: none;
 }
 
@@ -132,8 +241,7 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 3vh;
     text-decoration: none;
 }
 
@@ -143,7 +251,6 @@ body {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 3vh;
     text-decoration: none;
 }
