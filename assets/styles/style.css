@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url(../avenir_ff/AvenirLTStd-Black.otf);
+    font-style: normal;
+    font-size: medium;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(../Lato-Black.ttf);
+    font-style: normal;
+    font-size: medium;
+}
+
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: ;
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "cont_01 cont_01 cont_01 cont_01 cont_01"
+        "cont_02 cont_02 cont_02 cont_02 cont_02"
+        "cont_03 cont_03 cont_03 cont_03 cont_03"
+        "cont_04 cont_04 cont_04 cont_04 cont_04"
+        "cont_05 cont_05 cont_05 cont_05 cont_05";
+}
+
+
+
+.cont_01 {
+    grid-area: cont_01;
+    border: 1px solid black;
+    height: 1fr;
+    width: 100%;
+}
+
+.cont_02 {
+    grid-area: cont_02;
+    border: 1px solid black;
+    height: 1fr;
+    width: 100%;
+}
+
+.cont_03 {
+    grid-area: cont_03;
+    border: 1px solid black;
+    height: 1fr;
+    width: 100%;
+}
+
+.cont_04 {
+    grid-area: cont_04;
+    border: 1px solid black;
+    height: 1fr;
+    width: 100%;
+
+}
+
+.cont_05 {
+    grid-area: cont_05;
+    height: 1fr;
+    width: 100%;
+    background-color:
+        rgba(36, 88, 82, 1);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "text  text text text text"
+        "txt txt txt txt txt"
+        "txt_1 txt_1 txt_1 txt_1 txt_1"
+        "txt_2 txt_2 txt_2 txt_2 txt_2"
+        "txt_3 txt_3 txt_3 txt_3 txt_3"
+    ;
+}
+
+.text {
+    grid-area: text;
+    width: 100%;
+    height: 1fr;
+    display: grid;
+    justify-content: center;
+    font-family: 'Avenir';
+    color: white;
+    font-size: 40px;
+    line-height: 55px;
+}
+
+
+
+.txt_1 {
+    grid-area: txt_1;
+    width: 100%;
+    height: 1fr;
+    font-family: 'Lato';
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.txt_2 {
+    grid-area: txt_2;
+    width: 100%;
+    height: 1fr;
+    font-family: 'Lato';
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+
+.txt_3 {
+    grid-area: txt_3;
+    width: 100%;
+    height: 1fr;
+    font-family: 'Lato';
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.txt {
+    grid-area: txt;
+    width: 100%;
+    height: 1fr;
+    font-family: 'Lato';
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    text-decoration: none;
+}
