@@ -30,7 +30,7 @@ html {
     padding: 0;
 }
 
-body {
+.container {
     min-height: 100%;
     height: 100%;
     margin: 0;
@@ -260,4 +260,63 @@ body {
     color: white;
     font-size: 2vh;
     text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .footer {
+        grid-area: footer;
+        display: grid;
+        height: 1fr;
+        width: 100%;
+
+    }
+
+    .container {
+        min-height: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas:
+            "header header header "
+            "main main main "
+            "footer footer footer ";
+    }
+
+}
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+    .footer {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        height: 90vh;
+        width: 100vw;
+        grid-template-rows: 25% 1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "header header"
+            "main main";
+    }
+
+}
+
+@media screen and (max-width: 399px) {
+    .footer {
+        display: none;
+    }
+
+    .main {
+        height: 65vh;
+        display: grid;
+    }
+
+
+    .header {
+        height: 33vh;
+    }
 }
