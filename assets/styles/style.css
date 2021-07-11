@@ -30,11 +30,11 @@ html {
     padding: 0;
 }
 
-.container {
-    min-height: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 5px;
+.container {}
+
+.lndg {
+    padding-left: 10%;
+    padding-right: 10%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
@@ -42,6 +42,7 @@ html {
         "header header header "
         "main main main "
         "footer footer footer ";
+    background-color: rgba(36, 88, 82, 1);
 }
 
 .header {
@@ -158,10 +159,9 @@ html {
 .cont_03 {
     grid-area: cont_03;
     height: 1fr;
-    justify-content: center;
+    justify-content: flex-start;
     display: grid;
     text-align: center;
-
 }
 
 .lets {
@@ -169,7 +169,6 @@ html {
     color: rgba(255, 255, 255, 1);
     align-self: center;
     font-size: 5vh;
-    width: 70%;
 }
 
 .cont_04 {
@@ -192,15 +191,12 @@ html {
     width: 100%;
     background-color:
         rgba(36, 88, 82, 1);
-
 }
 
 .wrapper {
-    max-width: 80%;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: space-around;
     height: 100%;
-    width: 40%;
     background-color:
         rgba(36, 88, 82, 1);
     display: grid;
@@ -213,6 +209,7 @@ html {
         "txt_2"
         "txt_3 ";
     gap: 5px;
+    width: 100%;
 }
 
 .text {
@@ -269,11 +266,12 @@ html {
 }
 
 @media screen and (min-width: 600px) {
-    .container {
+    .lndg {
         min-height: 100%;
         height: 100%;
         margin: 0;
-        padding: 5px;
+        padding-left: 10%;
+        padding-right: 10%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 1fr;
@@ -289,31 +287,47 @@ html {
         display: none;
     }
 
-    .container {
+    .lndg {
         display: grid;
-        height: 90vh;
-        width: 100vw;
+        height: 100vh;
+        padding-left: 10%;
+        padding-right: 10%;
         grid-template-rows: 25% 1fr;
-        grid-template-columns: 50% 50%;
+
         grid-template-areas:
             "header header"
             "main main";
+        background-color: rgba(36, 88, 82, 1);
     }
 
     .main {
         display: grid;
         width: 100vw;
         height: 100vh;
-        grid-template-rows: 20% 70%;
+        grid-template-rows: 50% 50%;
         grid-template-columns: 50% 50%;
         grid-template-areas:
             "cont_03 cont_03"
             " cont_04 cont_04";
-        justify-items: center;
+        align-items: center;
+    }
+
+
+    .cont_03 {
+        align-content: flex-start;
+
     }
 
     .cont_04 {
         align-content: flex-start;
+    }
+
+    .lets {
+        font-family: 'Georgia';
+        color: rgba(255, 255, 255, 1);
+        align-self: flex-start;
+        font-size: 5vh;
+        width: 70%;
     }
 
 }
