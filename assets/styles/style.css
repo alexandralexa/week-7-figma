@@ -263,14 +263,6 @@ html {
 }
 
 @media screen and (min-width: 600px) {
-    .footer {
-        grid-area: footer;
-        display: grid;
-        height: 1fr;
-        width: 100%;
-
-    }
-
     .container {
         min-height: 100%;
         height: 100%;
@@ -284,7 +276,6 @@ html {
             "main main main "
             "footer footer footer ";
     }
-
 }
 
 @media screen and (min-width: 400px) and (max-width: 599px) {
@@ -301,6 +292,22 @@ html {
         grid-template-areas:
             "header header"
             "main main";
+    }
+
+    .main {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-rows: 20% 70%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            "cont_03 cont_03"
+            " cont_04 cont_04";
+        justify-items: center;
+    }
+
+    .cont_04 {
+        align-content: flex-start;
     }
 
 }
