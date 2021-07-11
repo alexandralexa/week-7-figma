@@ -188,11 +188,13 @@ html {
     display: grid;
     height: 1fr;
     width: 100%;
+
 }
 
 .wrapper {
     max-width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
+    align-content: space-around;
     height: 100%;
     width: 100%;
     background-color:
