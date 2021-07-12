@@ -214,6 +214,21 @@ html {
     width: 100%;
     background-color:
         rgba(36, 88, 82, 1);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "container_3 container_3 container_3 container_3";
+}
+
+.container_3 {
+    display: grid;
+    grid-area: container_3;
+    height: 1fr;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "wrapper wrapper wrapper wrapper";
 }
 
 .wrapper {
