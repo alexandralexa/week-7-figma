@@ -30,40 +30,47 @@ html {
     padding: 0;
 }
 
-.container {}
-
 .lndg {
-    padding-left: 10%;
-    padding-right: 10%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "header header header "
-        "main main main "
+        "header header header  "
+        "main main main"
         "footer footer footer ";
-    background-color: rgba(36, 88, 82, 1);
 }
 
 .header {
     grid-area: header;
-    height: 1fr;
-    width: 100%;
     background-image: url(../images/radu-florin-CwTBt6jyagQ-unsplash\ 1.svg);
+    height: 1fr;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: grid;
-    grid-template-columns: 20% 1fr 20%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "container_1 container_1 container_1 container_1";
+}
+
+.container_1 {
+    grid-area: container_1;
+    height: 100%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
     grid-template-areas: "logo nav btn";
-    justify-items: center;
+    justify-items: flex-start;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .logo {
     grid-area: logo;
     height: 100%;
-    justify-content: center;
-    width: 20%;
+    justify-content: flex-start;
+    width: 40%;
 }
 
 .pct {
@@ -81,7 +88,7 @@ html {
     justify-items: center;
     align-items: flex-start;
     margin: 15px;
-    font-size: 1vh;
+    font-size: 1rem;
     font-family: 'Lato';
 }
 
@@ -119,7 +126,7 @@ html {
     grid-template-columns: 50% 50%;
     grid-template-areas: "pct_2  button";
     gap: 10px;
-    justify-items: center;
+    justify-items: flex-start;
 }
 
 .pct_2 {
@@ -135,7 +142,7 @@ html {
     font-size: 1vh;
     text-decoration: none;
     color: #292929;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
@@ -144,6 +151,18 @@ html {
     height: 1fr;
     width: 100%;
     background: rgba(36, 88, 82, 1);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "container_2 container_2 container_2 container_2";
+}
+
+.container_2 {
+    height: 1fr;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-area: container_2;
     display: grid;
     grid-template-columns: 45% 1fr;
     gap: 10px;
@@ -154,21 +173,25 @@ html {
         "cont_03 cont_04"
         "cont_03 cont_04"
         "cont_03 cont_04";
+    justify-items: flex-start;
 }
+
+
 
 .cont_03 {
     grid-area: cont_03;
     height: 1fr;
     justify-content: flex-start;
     display: grid;
-    text-align: center;
+
 }
 
 .lets {
     font-family: 'Georgia';
     color: rgba(255, 255, 255, 1);
     align-self: center;
-    font-size: 5vh;
+    font-size: 3rem;
+    justify-content: flex-start;
 }
 
 .cont_04 {
@@ -219,7 +242,7 @@ html {
     justify-content: left;
     font-family: 'Avenir';
     color: white;
-    font-size: 4vh;
+    font-size: 4rem;
 }
 
 
@@ -230,7 +253,7 @@ html {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 2vh;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -240,7 +263,7 @@ html {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 2vh;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -251,7 +274,7 @@ html {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 2vh;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -261,7 +284,7 @@ html {
     height: 1fr;
     font-family: 'Lato';
     color: white;
-    font-size: 2vh;
+    font-size: 2rem;
     text-decoration: none;
 }
 
@@ -270,8 +293,6 @@ html {
         min-height: 100%;
         height: 100%;
         margin: 0;
-        padding-left: 10%;
-        padding-right: 10%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 2fr 1fr;
@@ -290,10 +311,7 @@ html {
     .lndg {
         display: grid;
         height: 100vh;
-        padding-left: 10%;
-        padding-right: 10%;
         grid-template-rows: 25% 1fr;
-
         grid-template-areas:
             "header header"
             "main main";
@@ -326,7 +344,7 @@ html {
         font-family: 'Georgia';
         color: rgba(255, 255, 255, 1);
         align-self: flex-start;
-        font-size: 5vh;
+        font-size: 5rem;
         width: 70%;
     }
 
